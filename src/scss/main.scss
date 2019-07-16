@@ -1,5 +1,6 @@
 @import "_normalize";
 @import "_variables";
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 
 html {
@@ -11,6 +12,54 @@ html {
 }
 
 body {
-  color: $yellow;
-  background: $violet;
+  background-color: #3767AD;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main{
+  display: flex;
+  height: 100vh;
+  width: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.glass-wraper{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  &__number{
+    z-index: 1;
+    font-size: 112px;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 40px;
+    
+   
+  }
+}
+
+.button--add{
+  font-size: 18px;
+  background-color: #fff;
+  width: 216px;
+  height: 47px;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 48px;
+  margin-bottom: 37px;
+  border: none;
+}
+
+.button--delete{
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  width: 184px;
+  height: 23px;
+  margin: 0 auto;
 }

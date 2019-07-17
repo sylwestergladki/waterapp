@@ -1,4 +1,9 @@
-# wtf-gulp-starter
+# Witaj na moim repozytorium
+
+Waterapp to aplikacja licząca wypite szklanki wody.
+Wykorzystuje ona PWA
+
+### wtf-gulp-starter
 
 `npm install -g gulp-cli`
 

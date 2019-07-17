@@ -22,27 +22,29 @@ if ('serviceWorker' in navigator) {
 const addGlass = document.querySelector('.button--add');
 const deleteGlass = document.querySelector('.button--delete');
 let numberGlass =  document.querySelector('.number--js');
+const key = new Date().toISOString().slice(0, 10);
 
 
 numberGlass.innerHTML = 0;
-
+localStorage.setItem(key , numberGlass.innerHTML);
+let countGlass
 
 
 addGlass.addEventListener("click", (e) => {
   e.preventDefault();
   numberGlass.innerHTML++;
-  localStorage.setItem('water', numberGlass.innerHTML);
+  localStorage.setItem(key, numberGlass.innerHTML);
 });
 
-if ( localStorage.getItem('water') > 0){
-
-  deleteGlass.addEventListener("click", (e) => {
+deleteGlass.addEventListener("click", (e) => {
   e.preventDefault();
-  numberGlass.innerHTML--;
-  localStorage.setItem('water', numberGlass.innerHTML);
-  });
-};
-  
+    if(parseInt(numberGlass.innerHTML) > 0) {
+      numberGlass.innerHTML--;
+      localStorage.setItem(key, numberGlass.innerHTML);
+     };
+});
+   
+
 
 
 

@@ -21,26 +21,29 @@ if ('serviceWorker' in navigator) {
 
 const addGlass = document.querySelector('.button--add');
 const deleteGlass = document.querySelector('.button--delete');
-let numberGlass =  document.querySelector('.number--js');
+let value =  document.querySelector('.number--js');
 const key = new Date().toISOString().slice(0, 10);
 
 
-numberGlass.innerHTML = 0;
-localStorage.setItem(key , numberGlass.innerHTML);
-let countGlass
-
+if(!localStorage.getItem(key)){
+  localStorage.setItem(key, 0)
+  value.innerHTML = '0';
+} else {
+  value.innerHTML = localStorage.getItem(key);
+}
 
 addGlass.addEventListener("click", (e) => {
-  e.preventDefault();
-  numberGlass.innerHTML++;
-  localStorage.setItem(key, numberGlass.innerHTML);
+  
+  localStorage.setItem(key, parseInt(localStorage.getItem(key)) + 1)
+  value.innerHTML = parseInt(value.innerHTML) + 1;
 });
 
 deleteGlass.addEventListener("click", (e) => {
-  e.preventDefault();
-    if(parseInt(numberGlass.innerHTML) > 0) {
-      numberGlass.innerHTML--;
-      localStorage.setItem(key, numberGlass.innerHTML);
+  
+  const glassValue = parseInt(parseInt(localStorage.getItem(key)) - 1);
+    if(glassValue > 0) {
+      localStorage.setItem(key, localStorage.getItem(key) - 1)
+      value.innerHTML = glassValue - 1;
      };
 });
    

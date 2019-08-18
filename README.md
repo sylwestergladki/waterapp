@@ -1,9 +1,16 @@
-# Witaj na moim repozytorium
+# Welcome - Watterapp
+![Glass](src/assets/img/water-glass.svg)
 
-Waterapp to aplikacja licząca wypite szklanki wody.
-Wykorzystuje ona PWA
+## Tools & technologies I've used
+- VSC
+- SASS
+- JS
+- HTML
+- PWA
+- LocalStorage
 
-### wtf-gulp-starter
+
+### Built with wtf-gulp-starter
 
 `npm install -g gulp-cli`
 

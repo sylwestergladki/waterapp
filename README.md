@@ -1,7 +1,7 @@
-# Welcome - Watterapp
+# Welcome - Waterapp
 ![Glass](src/assets/img/water-glass.svg)
 
-The Watterapp counts glasses of water
+The Waterapp counts glasses of water
 
 ## Tools & technologies I've used
 - VSC

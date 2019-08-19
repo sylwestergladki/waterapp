@@ -1,6 +1,8 @@
 # Welcome - Watterapp
 ![Glass](src/assets/img/water-glass.svg)
 
+The Watterapp counts glasses of water
+
 ## Tools & technologies I've used
 - VSC
 - SASS
